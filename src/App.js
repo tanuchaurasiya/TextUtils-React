@@ -2,7 +2,7 @@ import './App.css';
 import About from './components/About';
 import Navbar from './components/Navbar';
 import React, {useState} from 'react'
-// import TextForm from './components/TextForm';
+import TextForm from './components/TextForm';
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -23,8 +23,8 @@ function App() {
   return (
     <>
       <Navbar title="TextUtils" aboutText="AboutTextUtils" mode={mode} toggleMode={toggleMode}></Navbar>
-      {/* <TextForm heading="Enter text"></TextForm> */}
-      <About></About>
+      <TextForm heading="Enter text" mode={mode}></TextForm>
+      {/* <About></About> */}
     </>
   );
 }
